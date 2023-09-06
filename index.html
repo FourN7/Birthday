@@ -1,0 +1,91 @@
+<!DOCTYPR html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Birthday Gift</title>
+
+        <!-- Link CSS Style.css file-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style2.css">
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <canvas id="canvas"></canvas>
+
+
+
+            <div id="video"></div>
+
+
+            <div id="merrywrap" class="merrywrap">
+                <div class="balloon" style="margin-top: 2%">
+                    <div><span class="hbdspan">★</span></div>
+                    <div><span class="hbdspan">B</span></div>
+                    <div><span class="hbdspan">Ô</span></div>
+                    <div><span class="hbdspan">N</span></div>
+                    <div><span class="hbdspan">G</span></div>
+                    <div><span class="hbdspan">★</span></div>
+                </div>
+                <div class="giftbox">
+                    <div class="cover">
+                        <div></div>
+                    </div>
+
+                    <div class="box"></div>
+                </div>
+
+                <div class="icons">
+                    <div class="row1">
+                        <span>H</span>
+                        <span>a</span>
+                        <span>p</span>
+                        <span>p</span>
+                        <span>y</span>
+
+                    </div>
+                    <div class="row1">
+                        <span>B</span>
+                        <span>i</span>
+                        <span>r</span>
+                        <span>t</span>
+                        <span>h</span>
+                        <span>d</span>
+                        <span>a</span>
+                        <span>y</span>
+                    </div>
+
+                    <div class="row1">
+                        <span>B</span>
+                        <span>ô</span>
+                        <span>n</span>
+                        <span>g</span>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <audio autoplay src="music/Happy Birthday.mp3" id="my_audio" loop="loop"></audio>
+            <script src="js/audioplay.js"></script>
+            <script src="js/index.js"></script>
+            <script src="js/bubbly.js"></script>
+            <!--<script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>-->
+            <script>
+                bubbly({
+                    gradientStart: "#fff4e6",
+                    gradientStop: "#ffe9e4",
+                    shadowBlur: 1,
+                    compose: "source-over",
+                    fillFunc: () => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+                });
+            </script>
+        </div>
+    </body>
+
+    </html>
